@@ -51,7 +51,8 @@ if bib_database:
     bibtex_str = bibtexparser.dumps(bib_database, writer)
     #print(str(bibtex_str))
     with open(output_b, "w") as text_file:
-        print(bibtex_str, file=text_file)
+        #print(bibtex_str, file=text_file) # it does not work
+        print >> text_file , bibtex_str.encode('utf-8') 
 
 if bibtex_str:
     now = datetime.datetime.now()
