@@ -5,7 +5,7 @@ from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.customization import *
 
 input_b = "library.bib"
-output_b = "library_clean.bib"
+output_b = "lib_unused_fields.bib"
 
 now = datetime.datetime.now()
 print("{0} Cleaning duff bib records from {1} into {2}".format(now, input_b, output_b))
@@ -21,7 +21,7 @@ def customizations(record):
     record = page_double_hyphen(record)
     record = convert_to_unicode(record)
     ## delete the following keys.
-    unwanted = ["doi", "url", "abstract", "file", "gobbledegook", "isbn", "link", "keyword", "mendeley-tags", "annote", "pmid", "chapter", "institution", "issn", "month"]
+    unwanted = ["doi", "url", "abstract", "file", "gobbledegook", "isbn", "link", "keyword","keywords", "number","mendeley-tags", "annote", "pmid", "chapter", "institution", "issn", "month"]
     for val in unwanted:
         record.pop(val, None)
     return record
