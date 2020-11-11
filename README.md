@@ -1,4 +1,4 @@
-#clean_bib.py - Delete Unwanted Bibliography fields from .bib files.
+# clean_bib.py - Delete Unwanted Bibliography fields from .bib files.
 
 Do you use Mendeley, Papers, Zotero or other bibliographic softwares that export their bibliography to bibtex .bib files for use in LaTeX with with bibTeX or bibLaTeX? 
 
@@ -36,9 +36,5 @@ It works by removing fields you don’t want, and leaving any others. You can cu
     unwanted = ["doi", "url", "abstract", "file", "isbn", "link", "keyword", "mendeley-tags", "annote", "pmid", "chapter", "institution", "issn", "month"]
 
 Just add any fields you don’t want to this Python list. If you desire a field that’s being deleted, e.g. doi, url, isbn etc, then remove it from the list.
-
-##WARRANTY
-
-aahahahahahahahahahaha No. None. Nada. Nihil. Use at your own risk.
 
 
